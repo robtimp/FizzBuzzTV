@@ -1,25 +1,121 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="6185.10" systemVersion="14A360a" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="NO" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9052" systemVersion="14F27" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="Efr-6x-3aC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Settings View Controller-->
+        <scene sceneID="sER-Ig-ub2">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Efr-6x-3aC" customClass="SettingsViewController" customModule="FizzBuzzTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="AZI-6e-Yix"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Ab-yw-XBP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <view key="view" contentMode="scaleToFill" id="vTc-MZ-cC6">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="IhN-rM-INz">
+                                <rect key="frame" x="728" y="237" width="464" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="30"/>
+                                    <segment title="50"/>
+                                    <segment title="100"/>
+                                    <segment title="500"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the Maximum Number for FizzBuzz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdH-vR-sUp">
+                                <rect key="frame" x="564" y="100" width="791.5" height="57.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fizz" borderStyle="roundedRect" placeholder="Display for multiples of 3" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVF-Cv-Qly">
+                                <rect key="frame" x="710" y="484" width="500" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="E0O-n4-zpO"/>
+                                    <constraint firstAttribute="width" constant="500" id="yPD-gD-abw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Buzz" borderStyle="roundedRect" placeholder="Display for multiples of 5" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p2s-cU-2tB">
+                                <rect key="frame" x="710" y="586" width="500" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="0DN-Bi-1Vw"/>
+                                    <constraint firstAttribute="height" constant="66" id="fR1-Qz-U6u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Optionally, set custom text to use in place of Fizz and Buzz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0e-7h-spb">
+                                <rect key="frame" x="406" y="394" width="1108" height="57.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvw-SZ-lya">
+                                <rect key="frame" x="820" y="812" width="279" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Get Started"/>
+                                <connections>
+                                    <segue destination="d2J-25-HkE" kind="show" identifier="startSegue" id="Gsv-lR-hLi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cdH-vR-sUp" firstAttribute="centerX" secondItem="vTc-MZ-cC6" secondAttribute="centerX" id="1ub-Xf-jbe"/>
+                            <constraint firstItem="p2s-cU-2tB" firstAttribute="centerX" secondItem="vTc-MZ-cC6" secondAttribute="centerX" id="5gD-fu-i96"/>
+                            <constraint firstItem="cdH-vR-sUp" firstAttribute="top" secondItem="AZI-6e-Yix" secondAttribute="bottom" constant="100" id="7eu-vT-an5"/>
+                            <constraint firstItem="B0e-7h-spb" firstAttribute="top" secondItem="IhN-rM-INz" secondAttribute="bottom" constant="87.5" id="HF9-u0-jpp"/>
+                            <constraint firstItem="IhN-rM-INz" firstAttribute="centerX" secondItem="vTc-MZ-cC6" secondAttribute="centerX" id="HYW-LZ-Ovd"/>
+                            <constraint firstItem="lVF-Cv-Qly" firstAttribute="top" secondItem="B0e-7h-spb" secondAttribute="bottom" constant="32.5" id="Odr-j3-bTw"/>
+                            <constraint firstItem="IhN-rM-INz" firstAttribute="top" secondItem="cdH-vR-sUp" secondAttribute="bottom" constant="80" id="Oxx-0Q-uSE"/>
+                            <constraint firstItem="B0e-7h-spb" firstAttribute="centerX" secondItem="vTc-MZ-cC6" secondAttribute="centerX" id="YaI-vK-Cbg"/>
+                            <constraint firstItem="lVF-Cv-Qly" firstAttribute="centerX" secondItem="vTc-MZ-cC6" secondAttribute="centerX" id="ZDb-bD-eK8"/>
+                            <constraint firstItem="yvw-SZ-lya" firstAttribute="top" secondItem="p2s-cU-2tB" secondAttribute="bottom" constant="160" id="bWF-Tx-wIV"/>
+                            <constraint firstItem="yvw-SZ-lya" firstAttribute="centerX" secondItem="vTc-MZ-cC6" secondAttribute="centerX" id="c1I-DG-2SW"/>
+                            <constraint firstItem="p2s-cU-2tB" firstAttribute="top" secondItem="lVF-Cv-Qly" secondAttribute="bottom" constant="36" id="hkK-6L-tXp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buzzField" destination="p2s-cU-2tB" id="Iul-EN-oRF"/>
+                        <outlet property="fizzField" destination="lVF-Cv-Qly" id="wc2-rF-jv9"/>
+                        <outlet property="selectedNumber" destination="IhN-rM-INz" id="g9I-g9-FOj"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4qQ-ju-cRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1393" y="-384"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EcX-UH-165">
+            <objects>
+                <tableViewController id="d2J-25-HkE" customClass="ViewController" customModule="FizzBuzzTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="40" sectionFooterHeight="40" id="5fV-1J-glP">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="KVa-r5-JNS">
+                                <rect key="frame" x="0.0" y="54" width="1880" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KVa-r5-JNS" id="lhB-a8-wxH">
+                                    <rect key="frame" x="0.0" y="0.0" width="1880" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="d2J-25-HkE" id="Wem-bG-fc5"/>
+                            <outlet property="delegate" destination="d2J-25-HkE" id="xuX-Qq-GRM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSc-c5-be1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721" y="-384"/>
         </scene>
     </scenes>
 </document>
