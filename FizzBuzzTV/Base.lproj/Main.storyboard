@@ -17,8 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="IhN-rM-INz">
-                                <rect key="frame" x="728" y="237" width="464" height="70"/>
+                                <rect key="frame" x="710" y="237" width="500" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="E7L-Ns-hdl"/>
+                                    <constraint firstAttribute="width" constant="500" id="KmW-dd-3t2"/>
+                                </constraints>
                                 <segments>
                                     <segment title="30"/>
                                     <segment title="50"/>
